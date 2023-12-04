@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+body {
+  background-color: grey;
+  color: rgb(149, 149, 149);
+  font-family: 'Poppins', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.age-calc-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 40px;
+  width: 600px;
+  height: 500px;
+  border-radius: 20px;
+  border-bottom-right-radius: 140px;
+  background-color: white;
+}
+input {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  border: rgb(214, 214, 214) solid 1px;
+  float: left;
+  margin-top: 5px;
+  font-size: 2em;
+  font-weight: bold;
+  padding-left: 20px
+}
+::placeholder {
+  color: rgb(149, 149, 149);
+}
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  float: left;
+}
+hr {
+  border: solid rgb(216, 216, 216) 1px;
+  width: 80%;
+  float: left;
+  margin: 40px 0 40px 0;
+}
+img {
+  position: relative;
+  width: 40px;
+  top: 3px;
+}
+.submit {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  background-color: rgb(129, 69, 232);
+  color: rgb(129, 69, 232);
+  left: 520px;
+  top: 115px;
+  transition: 0.3s;
+  border: none;
+}
+.submit:hover {
+  transition: 0.3s;
+  background-color: black;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.results div {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5em;
+  font-weight: bold 700;
+  font-style: italic;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.results div span {
+  color: rgb(129, 69, 232);;
 }
