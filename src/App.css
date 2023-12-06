@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 body {
-  background-color: grey;
+  background-color: rgb(227, 227, 227);
   color: rgb(149, 149, 149);
   font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 .age-calc-container {
   display: flex;
   flex-direction: column;
+  position: relative;
+  margin: 0 auto 0 auto;
   padding: 40px;
   width: 600px;
   height: 500px;
   border-radius: 20px;
-  border-bottom-right-radius: 140px;
+  border-bottom-right-radius: 180px;
   background-color: white;
 }
 input {
