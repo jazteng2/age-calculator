@@ -5,7 +5,7 @@ function Form() {
   const [formData, setFormData] = useState({ year: '', month: '', day: '' });
   const [displayData, setDisplayData] = useState({ year: '--', month: '--', day: '--' });
   const ageData = { year: 0, month: 0, day: 0 };
-  
+
   function handleSubmit(event) {
     event.preventDefault();
     calculateAge();
@@ -41,13 +41,13 @@ function Form() {
     } else {
       ageMonth--;
       ageDay = 31 + dayNow - dayDob;
-      
+
       if (ageMonth < 0) {
         ageMonth = 11;
         ageYears--;
       }
     }
-    
+
     ageData.year = ageYears;
     ageData.month = ageMonth;
     ageData.day = ageDay;
@@ -61,9 +61,9 @@ function Form() {
     const year = ageData.year;
     const month = ageData.month;
     const day = ageData.day;
-    setInterval(() => {
+    const interval = setInterval(() => {
       if (yearCount == year && monthCount == month && dayCount == day) {
-        clearInterval(this);
+        clearInterval(interval);
       }
 
       if (yearCount != year) {
@@ -78,6 +78,7 @@ function Form() {
         dayCount++;
       }
       setDisplayData({ ...displayData, year: yearCount, month: monthCount, day: dayCount });
+      console.log("IIIII");
     }, 50);
   }
 
